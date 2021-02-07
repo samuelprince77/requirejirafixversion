@@ -9,7 +9,6 @@ let fixVersions = null
 new MutationSummary({
     rootNode: document.body,
     callback: function (summaries) {
-        console.log(summaries)
         // Button is removed when the dialog is closed
         let actionButtonRemoved = false
         let fixVersionRemoved = false
