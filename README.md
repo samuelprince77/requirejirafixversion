@@ -1,2 +1,2 @@
 # Require JIRA fix version chrome extension
-This chrome extension alerts you if you move a JIRA ticket to ready to test column without specifying a fix version
+This chrome extension alerts you if you move a JIRA ticket to ready to test column without specifying a fix version. This extension makes use of [Mutation Summary](https://github.com/rafaelw/mutation-summary) to listen for specific DOM changes that signal a ticket is being moved to the test column. If a fix version is missing, the resolve button click with trigger a confirmation alert and depending on the result of the confirmation, you can return to the ticket and fix the issue or proceed ignoring the warning. 
