@@ -13,6 +13,7 @@ new MutationSummary({
         // Button is removed when the dialog is closed
         let actionButtonRemoved = false
         let fixVersionRemoved = false
+
         summaries.forEach(function (summary) {
             if (summary.added.length > 0) {
                 let elementOfInterest = summary.added[0]
@@ -23,8 +24,7 @@ new MutationSummary({
                         elementOfInterest.attributes.getNamedItem("value").value === EXPECTED_ACTION_BUTTON_TEXT_2
                     )
                 ) {
-                    actionButton = document.getElementById(elementOfInterest.id)
-                    console.log(actionButton.attributes.getNamedItem("value"))
+                    actionButton = elementOfInterest
                 }
             } else if (summary.removed.length > 0) {
                 if (summary.removed[0].classList.contains(FIX_VERSIONS_CLASS_NAME)) {
